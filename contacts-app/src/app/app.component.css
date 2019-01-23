@@ -1,0 +1,109 @@
+/* Styles go here */
+
+.nav-bar {
+    width: 100%;
+    background-color: lightblue;
+    border: 2px solid;
+  }
+  
+  .text-search {
+    border: 2px solid;
+    border-radius: 5px;
+    height: 25px;
+    width: 25%;
+  }
+  .font-style {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+  }
+  .user-section {
+    /* background-color: red; */
+    float: right;
+    width: 20%;
+  }
+  
+  .height50 {
+    height: 50px;
+  }
+
+  .height70 {
+    height: 70px;
+  }
+
+  .nav-margin {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 30% 60%;
+  }
+  .grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+  }
+  .user-section-container {
+    display: grid;
+    grid-template-columns: 60% 30%;
+  }
+  .photo-container {
+    display: grid;
+    grid-template-columns: 80% 10%;
+  }
+  .pad0 {
+      padding: 0px !important;
+  }
+  .content-body {
+      /* background-color:cadetblue; */
+      /* padding: 10px; */
+  }
+  .left-sidenav {
+    background-color: yellowgreen;
+    width: 30%;
+    display: inline-block;
+  }
+
+  .contact-name {
+    height: 75px;
+    text-align: center;
+    border: 2px solid;
+    padding-top: 35px;
+    cursor: pointer;
+  }
+
+  .right-panel {
+    margin-left: 60px;
+    width: 65%;
+    /* border: 1px solid; */
+    /* background-color: yellow; */
+    display: inline-block;
+  }
+
+  .send-button {
+    background-color: rgb(50, 139, 180);
+    border: 2px solid;
+    color: white;
+    height: 80px;
+    width: 250px;
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+  }
+
+  .norating {
+    color: rgb(196, 189, 189);
+  }
+
+  .pad-style-right-panel {
+    padding-left: 60px;
+    padding-top: 50px;
+  }
+
+  .selected-contact {
+    background-color: #dddddd;
+  }
+
+  .border-style {
+    border: 1px solid;
+    border-right: 2px solid;
+  }

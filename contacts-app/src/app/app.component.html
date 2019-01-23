@@ -1,0 +1,79 @@
+<div class="contacts-page">
+  <div class="nav-bar height80">
+    <input type="text" name="search" [(ngModel)]='searchContact' class="text-search nav-margin" placeholder="  &#xF002; Search"
+      style="font-family:Arial, FontAwesome">
+    <div class="user-section font-style height70 user-section-container">
+      <div class="grid-item">
+        <span>Karthik Varma </span>
+      </div>
+      <div class="grid-item pad0">
+        <div class="photo-container">
+          <div class="grid-item pad0">
+            <img src="http://resta-food-court.herokuapp.com/mastervendor.jpg" width="65" height="70" />
+          </div>
+          <div class="grid-item border-style">
+            <span>
+              <i class="fa fa-caret-down"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content-body grid-container">
+    <div class="grid-item">
+      <div class="contact-name font-style" *ngFor="let contact of (contacts | contactsFilter : searchContact)" (click)="fetchContactDetails(contact)"
+        [ngClass]="{'selected-contact': contactDetails && contactDetails.name === contact.name}">
+        <span class="mar">{{contact.name}}</span>
+        <span class="pad-right5 float-right" *ngIf="contactDetails && contactDetails.name === contact.name"><i class="fa fa-caret-right"></i></span>
+      </div>
+    </div>
+    <div class="grid-item pad-style-right-panel" *ngIf="contactDetails">
+      <div>
+        <div class="display-inline-block">
+          <img src="{{contactDetails.img}}" />
+        </div>
+        <div class="display-inline-block pad-left20">
+          <button type="button" class="send-button">SEND MESSAGE!</button>
+          <div class="pad-top5">
+            <ng-container *ngFor="let rating of ratings">
+              <span><i class="fa fa-heart fa-3x"></i></span>
+            </ng-container>
+            <ng-container *ngFor="let norating of noratings">
+              <span><i class="fa fa-heart fa-3x norating"></i></span>
+            </ng-container>
+          </div>
+          <div class="pad-top55">
+            &nbsp;
+          </div>
+        </div>
+      </div>
+      <div class="width70 pad-top20">
+        <span class="font-style">{{contactDetails.Description}}</span>
+      </div>
+      <div class="width70 pad-top5">
+        <table>
+          <tr>
+            <th>
+              Likes
+            </th>
+            <th>
+              Dislikes
+            </th>
+          </tr>
+          <ng-container>
+            <tr *ngFor="let data of likesAndDisLikes">
+              <td>{{data.like}}</td>
+              <td>
+                {{data.dislike}}
+              </td>
+            </tr>
+          </ng-container>
+        </table>
+      </div>
+      <div class="pad-top55">
+        &nbsp;
+      </div>
+    </div>
+  </div>
+</div>
